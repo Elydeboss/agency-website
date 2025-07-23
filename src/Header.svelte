@@ -144,6 +144,7 @@
     {#if isMenuOpen}
       <div class="md:hidden bg-white shadow-lg text-bold">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
           <a href="#services" class="block px-3 py-2 text-gray-600 hover:text-primary">Services</a>
           <a href="#work" class="block px-3 py-2 text-gray-600 hover:text-primary">Work</a>
           <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-primary">About</a>
@@ -221,7 +222,7 @@
       <div class="grid grid-cols-3 md:grid-cols-2 gap-8">
         {#each projects as project, i}
           <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <img src={project.image || "/placeholder.svg"} alt={project.title} class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+            <img src={project.image || "/placeholder.svg"} alt={project.title} class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-90 transition-opacity group-hover:opacity-100"></div>
             <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
               <span class="text-sm font-medium text-primary-light bg-black/30 px-3 py-1 rounded-full">{project.category}</span>
